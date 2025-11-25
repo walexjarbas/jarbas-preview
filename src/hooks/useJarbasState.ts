@@ -38,7 +38,7 @@ const getInitialState = (): JarbasState => {
     const selectedObjective = localStorage.getItem('jarbas_selected_objective') || '';
     const conversationType = localStorage.getItem('jarbas_conversation_type') || 'proactive';
     const requestEvaluation = JSON.parse(localStorage.getItem('jarbas_request_evaluation') || 'false');
-    const useAI = JSON.parse(localStorage.getItem('jarbas_msg_ai') || 'false');
+    const useAI = JSON.parse(localStorage.getItem('jarbas_msg_ai') || 'true');
 
     // Load personalization fields
     const savedFields = localStorage.getItem('jarbas_personalization_fields');
@@ -154,7 +154,7 @@ const getInitialState = (): JarbasState => {
           status: 'read'
         }
       ],
-      useAI: false
+      useAI: true
     };
   }
 };
